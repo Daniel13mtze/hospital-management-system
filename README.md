@@ -1,43 +1,33 @@
-# Sistema de Control Hospitalario
+# 🏥 Hospital Management System
 
-Este es un sistema de escritorio desarrollado en **C# (.NET Windows Forms)** y **SQL Server** diseñado para gestionar las operaciones esenciales de una clínica u hospital, optimizando el control de citas médicas, administración de salas de atención, solicitudes de estudios clínicos y el registro de altas médicas.
+![C#](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![SQL Server](https://img.shields.io/badge/SQL%20Server-CC2927?style=for-the-badge&logo=microsoft-sql-server&logoColor=white)
+![Windows Forms](https://img.shields.io/badge/Windows%20Forms-512BD4?style=for-the-badge&logo=.net&logoColor=white)
 
----
-
-## 🚀 Características Principales
-
-El sistema está estructurado mediante módulos independientes que facilitan la navegación y el flujo de trabajo del personal administrativo y médico:
-
-*   **Módulo de Citas:** Registro, control y seguimiento de las consultas médicas de los pacientes.
-*   **Gestión de Salas (GS):** Administración de espacios disponibles (quirófanos, consultorios, salas de espera) y asignación de recursos.
-*   **Solicitud de Clínicos (SC):** Control de órdenes y solicitudes de análisis o estudios clínicos para los pacientes.
-*   **Registro de Altas (RA):** Gestión de egresos hospitalarios, permitiendo mantener un historial actualizado del estado del paciente.
+Aplicación de escritorio interactiva desarrollada en **C# (.NET)** y gestionada con una base de datos relacional en **SQL Server**. Este sistema automatiza y centraliza los flujos operativos clave de una institución médica, desde el control de agendas hasta la administración contable interna.
 
 ---
 
-## 🛠️ Tecnologías Utilizadas
+## 💻 Módulos del Sistema
 
-*   **Lenguaje:** C# (.NET Framework / .NET Core para Windows Forms)
-*   **Base de Datos:** Microsoft SQL Server
-*   **Entorno de Desarrollo:** Visual Studio
+La interfaz de usuario está construida de manera modular mediante eventos síncronos en Windows Forms, dividiéndose en 5 pilares operativos:
 
----
-
-## 🗄️ Estructura de la Base de Datos
-
-El sistema interactúa con una base de datos relacional que maneja la persistencia de los datos. El diseño incluye tablas principales como:
-
-*   `CITAS`: Almacenamiento de información de consultas (Número de paciente, médico, fecha y hora).
-*   `GESTIÓN_DE_SALAS`: Control del estado y asignación de las instalaciones.
-*   `SOLICITUD_DE_CLÍNICOS`: Registro de estudios médicos requeridos.
-*   `REGISTRO_DE_ALTAS`: Historial de pacientes dados de alta.
+*   📅 **Citas:** Control total para listar, consultar, modificar y borrar la programación de consultas médicas (vínculo directo con médicos, pacientes y consultorios).
+*   🏢 **Gestión de Salas:** Monitoreo y asignación de disponibilidad de espacios clínicos e infraestructura del hospital.
+*   📊 **Sistema Contable:** Administración financiera de los servicios prestados y flujos transaccionales internos.
+*   👥 **Registro de Pacientes:** Base de datos centralizada para el alta y seguimiento único de los pacientes mediante número de registro (NP).
+*   📝 **Registro de Actividad:** Historial clínico automatizado para el almacenamiento y consulta de diagnósticos médicos.
 
 ---
 
-## 📦 Instalación y Configuración
+## 🗄️ Arquitectura de Datos (SQL)
 
-Sigue estos pasos para ejecutar el proyecto de forma local:
+El backend de persistencia se compone de una estructura relacional optimizada mediante el script `Hospital.sql`, el cual inicializa el entorno con las siguientes entidades principales:
 
-### 1. Clonar el repositorio
-```bash
-git clone https://github.com/Daniel13mtze/hospital-management-system.git
+```sql
+-- Tablas núcleo del sistema
+- CITAS                  -- Guarda: Fecha, Paciente, Hora, Médico, Consultorio, Edad y NP.
+- GESTIÓN_DE_SALAS       -- Monitoreo de salas clínicas.
+- REGISTRO_DE_ACT        -- Historial de diagnósticos asignados.
+- REGISTRO_DE_PACIENTES  -- Control de índices de pacientes (NP).
+- SISTEMA_CONTABLE       -- Transacciones y registros numéricos financieros.
