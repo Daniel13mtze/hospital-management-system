@@ -31,3 +31,20 @@ El backend de persistencia se compone de una estructura relacional optimizada me
 - REGISTRO_DE_ACT        -- Historial de diagnósticos asignados.
 - REGISTRO_DE_PACIENTES  -- Control de índices de pacientes (NP).
 - SISTEMA_CONTABLE       -- Transacciones y registros numéricos financieros.
+
+---
+
+## 🛠️ Clonación e Inicialización Local
+
+Para correr el entorno de desarrollo en tu máquina:
+
+```bash
+# 1. Clona este repositorio
+git clone [https://github.com/Daniel13mtze/hospital-management-system.git](https://github.com/Daniel13mtze/hospital-management-system.git)
+
+# 2. Configura la Base de Datos
+# - Abre SQL Server Management Studio (SSMS)
+# - Ejecuta el script 'Hospital.sql' para levantar la estructura
+
+# 3. Compila en Visual Studio
+# - Abre la solución (.sln), configura las credenciales de tu servidor local y presiona F5.
