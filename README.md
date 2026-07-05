@@ -31,7 +31,6 @@ El backend de persistencia se compone de una estructura relacional optimizada me
 - REGISTRO_DE_ACT        -- Historial de diagnósticos asignados.
 - REGISTRO_DE_PACIENTES  -- Control de índices de pacientes (NP).
 - SISTEMA_CONTABLE       -- Transacciones y registros numéricos financieros.
-
 ---
 
 ## 🛠️ Clonación e Inicialización Local
@@ -48,3 +47,4 @@ git clone [https://github.com/Daniel13mtze/hospital-management-system.git](https
 
 # 3. Compila en Visual Studio
 # - Abre la solución (.sln), configura las credenciales de tu servidor local y presiona F5.
+---
